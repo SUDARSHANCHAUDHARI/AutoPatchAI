@@ -1,0 +1,57 @@
+[
+  {
+    "cve": "CVE-2021-23337",
+    "dependency": {
+      "ecosystem": "npm",
+      "name": "lodash",
+      "source": "data/samples/package.json",
+      "version": "4.17.20"
+    },
+    "kind": "dependency.vulnerable",
+    "safe": "4.17.21",
+    "severity": "high",
+    "summary": "lodash should be upgraded to 4.17.21.",
+    "vulnerable": "4.17.20"
+  },
+  {
+    "cve": "CVE-2022-34265",
+    "dependency": {
+      "ecosystem": "python",
+      "name": "django",
+      "source": "data/samples/requirements.txt",
+      "version": "3.2.0"
+    },
+    "kind": "dependency.vulnerable",
+    "safe": "4.2.11",
+    "severity": "high",
+    "summary": "django should be upgraded to 4.2.11.",
+    "vulnerable": "3.2.0"
+  },
+  {
+    "cve": "UNPINNED",
+    "dependency": {
+      "ecosystem": "python",
+      "name": "requests",
+      "source": "data/samples/requirements.txt",
+      "version": "unpinned"
+    },
+    "kind": "dependency.unpinned",
+    "safe": "pin-reviewed-version",
+    "severity": "medium",
+    "summary": "requests is unpinned."
+  },
+  {
+    "cve": "PIN-BASE-IMAGE",
+    "dependency": {
+      "ecosystem": "docker",
+      "name": "python",
+      "source": "data/samples/Dockerfile",
+      "version": "latest"
+    },
+    "kind": "dependency.vulnerable",
+    "safe": "3.12-slim",
+    "severity": "medium",
+    "summary": "python should be upgraded to 3.12-slim.",
+    "vulnerable": "latest"
+  }
+]

@@ -1,0 +1,26 @@
+[
+  {
+    "ecosystem": "npm",
+    "name": "lodash",
+    "source": "data/samples/package.json",
+    "version": "4.17.20"
+  },
+  {
+    "ecosystem": "python",
+    "name": "django",
+    "source": "data/samples/requirements.txt",
+    "version": "3.2.0"
+  },
+  {
+    "ecosystem": "python",
+    "name": "requests",
+    "source": "data/samples/requirements.txt",
+    "version": "unpinned"
+  },
+  {
+    "ecosystem": "docker",
+    "name": "python",
+    "source": "data/samples/Dockerfile",
+    "version": "latest"
+  }
+]
