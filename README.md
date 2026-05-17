@@ -1,8 +1,21 @@
 # AutoPatch AI
 
-**Goal:** AI-assisted dependency vulnerability fixer.
+[![Python](https://img.shields.io/badge/Python-3.12-blue)](#) [![Status](https://img.shields.io/badge/status-MVP-green)](#) [![Security](https://img.shields.io/badge/security-defensive%20lab-purple)](#)
 
-**MVP:** Upload package files, detect risky packages, and suggest safe upgrades.
+AI-assisted dependency vulnerability fixer that scans package files and produces safe upgrade plans.
+
+- **Portfolio group:** Product-style SaaS project
+- **Status:** MVP implemented, tested, committed, and pushed to GitHub
+- **GitHub:** https://github.com/SUDARSHANCHAUDHARI/AutoPatchAI
+- **Local path:** `/Users/screencloudsudarshan/SUDARSHAN_CODE/sudarshan_repos/CyberSecurity/AutoPatchAI`
+
+## MVP Snapshot
+
+This repository includes a working MVP with safe sample data, deterministic detection or analysis logic, local tests, and generated output reports where relevant. It is ready for README/demo polish or deeper product work.
+
+## Safe Use
+
+This project is defensive and analysis-focused. Use only with logs, systems, repositories, and lab environments you own or have permission to assess.
 
 ## Core Features
 
@@ -46,17 +59,10 @@ python3 -m unittest discover -s tests -p 'test_*.py'
 - Flags vulnerable, unpinned, and `latest` dependency usage.
 - Generates an upgrade plan and PR preview.
 
-## Repository Status
+## Roadmap
 
-This repository contains the production-ready foundation for the AutoPatch AI MVP. The current codebase is scaffolded and ready for focused implementation work.
-
-## Production Foundation
-
-- Private GitHub repository linked to `main`
-- Initial MVP scaffold committed
-- CI repository-health workflow
-- Security policy
-- Contribution guide
-- Pull request and issue templates
-- Production readiness checklist
-- Safe ignore rules for local secrets and generated files
+- Polish sample output screenshots or terminal demos
+- Add architecture diagram and deeper implementation notes
+- Expand test coverage around edge cases
+- Add Docker or local demo workflow where useful
+- Prepare `v0.1.0-mvp` release notes
