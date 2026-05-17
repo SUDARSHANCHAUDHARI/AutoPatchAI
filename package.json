@@ -1,0 +1,11 @@
+{
+  "name": "autopatch-ai",
+  "private": true,
+  "version": "0.1.0",
+  "description": "AutoPatch AI scaffold",
+  "scripts": {
+    "setup": "bash scripts/setup.sh",
+    "seed": "bash scripts/seed-demo-data.sh",
+    "dev": "bash scripts/run-local.sh"
+  }
+}
