@@ -1,10 +1,18 @@
-"""Upgrade Planner module for AutoPatch AI."""
+"""Build upgrade plans."""
+
+from __future__ import annotations
 
 
-def main() -> None:
-    """Placeholder entry point."""
-    raise NotImplementedError("Implement upgrade planner logic")
-
-
-if __name__ == "__main__":
-    main()
+def plan_upgrades(findings: list[dict]) -> list[dict]:
+    """Return upgrade actions."""
+    return [
+        {
+            "ecosystem": item["dependency"]["ecosystem"],
+            "name": item["dependency"]["name"],
+            "from": item["dependency"]["version"],
+            "to": item["safe"],
+            "reason": item["summary"],
+            "source": item["dependency"]["source"],
+        }
+        for item in findings
+    ]
