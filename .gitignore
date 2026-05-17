@@ -1,0 +1,22 @@
+# Production hygiene
+.DS_Store
+.env
+.env.*
+!.env.example
+*.log
+*.tmp
+.cache/
+coverage/
+dist/
+build/
+.next/
+node_modules/
+.venv/
+venv/
+__pycache__/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.idea/
+.vscode/
+

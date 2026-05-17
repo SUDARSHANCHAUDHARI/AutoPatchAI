@@ -1,0 +1,58 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  repository-health:
+    name: Repository health
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Verify required files
+        run: |
+          test -f README.md
+          test -f SECURITY.md
+          test -f CONTRIBUTING.md
+          test -f LICENSE
+          test -f docs/PRODUCTION_READINESS.md
+
+      - name: Check for accidental secrets placeholders
+        run: |
+          ! grep -RInE '(api[_-]?key|token|secret|password) *= *["'"''][^"'"'']{8,}' . \
+            --exclude-dir=.git \
+            --exclude=SECURITY.md
+
+  node-health:
+    name: Node project health
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Validate package metadata
+        run: node -e "const pkg=require('./package.json'); if(!pkg.name) throw new Error('package name missing')"
+
+  python-health:
+    name: Python syntax health
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Compile Python files
+        run: python -m compileall .
