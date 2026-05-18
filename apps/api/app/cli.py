@@ -9,6 +9,7 @@ from pathlib import Path
 from apps.api.app.services.ai_fix_explainer import explain_plan
 from apps.api.app.services.dependency_parser import parse_files
 from apps.api.app.services.github_pr_service import build_pr_preview
+from apps.api.app.services.risk_summary import build_markdown_report, summarize_findings
 from apps.api.app.services.upgrade_planner import plan_upgrades
 from apps.api.app.services.vulnerability_scanner import scan_vulnerabilities
 
@@ -21,11 +22,13 @@ def main() -> None:
     deps = parse_files(args.files)
     findings = scan_vulnerabilities(deps)
     plan = plan_upgrades(findings)
+    summary = summarize_findings(deps, findings, plan)
     explanation = explain_plan(plan)
     args.out_dir.mkdir(parents=True, exist_ok=True)
-    for name, payload in {"dependencies": deps, "findings": findings, "upgrade_plan": plan}.items():
+    for name, payload in {"dependencies": deps, "findings": findings, "upgrade_plan": plan, "summary": summary}.items():
         (args.out_dir / f"{name}.json").write_text(json.dumps(payload, indent=2, sort_keys=True) + "\n", encoding="utf-8")
     (args.out_dir / "pr-preview.md").write_text(build_pr_preview(plan, explanation), encoding="utf-8")
+    (args.out_dir / "risk-report.md").write_text(build_markdown_report(summary, plan), encoding="utf-8")
     print(f"Found {len(findings)} issue(s)")
     print(f"Planned {len(plan)} upgrade(s)")
 

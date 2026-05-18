@@ -1,0 +1,33 @@
+{
+  "dependencies_scanned": 4,
+  "ecosystem_counts": {
+    "docker": 1,
+    "npm": 1,
+    "python": 2
+  },
+  "findings": 4,
+  "high_severity": 2,
+  "medium_severity": 2,
+  "planned_upgrades": 4,
+  "severity_counts": {
+    "high": 2,
+    "medium": 2
+  },
+  "source_counts": {
+    "data/samples/Dockerfile": 1,
+    "data/samples/package.json": 1,
+    "data/samples/requirements.txt": 2
+  },
+  "top_priority": {
+    "confidence": "offline-rule-match",
+    "ecosystem": "npm",
+    "from": "4.17.20",
+    "name": "lodash",
+    "priority": "urgent",
+    "reason": "lodash should be upgraded to 4.17.21.",
+    "severity": "high",
+    "source": "data/samples/package.json",
+    "to": "4.17.21",
+    "validation": "Run unit tests, dependency audit, and smoke checks before merging."
+  }
+}

@@ -1,1 +1,6 @@
-# TODO: add web Dockerfile
+FROM node:22-slim
+
+WORKDIR /app
+COPY package.json .
+
+CMD ["node", "-e", "console.log('AutoPatch AI web scaffold: React components are in apps/web/src/components')"]

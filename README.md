@@ -1,17 +1,17 @@
 # AutoPatch AI
 
-[![Python](https://img.shields.io/badge/Python-3.12-blue)](#) [![Status](https://img.shields.io/badge/status-MVP-green)](#) [![Security](https://img.shields.io/badge/security-defensive%20lab-purple)](#)
+[![Python](https://img.shields.io/badge/Python-3.12-blue)](#) [![Status](https://img.shields.io/badge/status-product%20polish-green)](#) [![Security](https://img.shields.io/badge/security-defensive%20lab-purple)](#)
 
 AI-assisted dependency vulnerability fixer that scans package files and produces safe upgrade plans.
 
 - **Portfolio group:** Product-style SaaS project
-- **Status:** MVP implemented, tested, committed, and pushed to GitHub
+- **Status:** Product polish implemented, tested, committed, and pushed to GitHub
 - **GitHub:** https://github.com/SUDARSHANCHAUDHARI/AutoPatchAI
 - **Local path:** `/Users/screencloudsudarshan/SUDARSHAN_CODE/sudarshan_repos/CyberSecurity/AutoPatchAI`
 
 ## MVP Snapshot
 
-This repository includes a working MVP with safe sample data, deterministic detection or analysis logic, local tests, and generated output reports where relevant. It is ready for README/demo polish or deeper product work.
+This repository includes a working MVP with safe sample data, deterministic dependency analysis, upgrade planning, PR preview output, dashboard-ready summary JSON, and product-style risk reports.
 
 ## Safe Use
 
@@ -25,6 +25,9 @@ This project is defensive and analysis-focused. Use only with logs, systems, rep
 - CVE lookup
 - AI upgrade explanation
 - GitHub PR suggestion
+- severity and priority scoring
+- dashboard summary JSON
+- risk report for reviewers
 
 ## Suggested Stack
 
@@ -52,17 +55,34 @@ Run tests:
 python3 -m unittest discover -s tests -p 'test_*.py'
 ```
 
-## MVP Capabilities
+Generated outputs:
+
+- `data/reports/dependencies.json`
+- `data/reports/findings.json`
+- `data/reports/upgrade_plan.json`
+- `data/reports/summary.json`
+- `data/reports/risk-report.md`
+- `data/reports/pr-preview.md`
+
+## Docker Demo
+
+```bash
+docker compose run --rm api
+```
+
+## Product Polish Capabilities
 
 - Parses `package.json`, `requirements.txt`, and Dockerfile base images.
 - Uses an offline vulnerability ruleset for repeatable demos.
 - Flags vulnerable, unpinned, and `latest` dependency usage.
 - Generates an upgrade plan and PR preview.
+- Adds priority, confidence, severity, and validation metadata to upgrade actions.
+- Generates reviewer-friendly risk and PR reports.
 
 ## Roadmap
 
-- Polish sample output screenshots or terminal demos
-- Add architecture diagram and deeper implementation notes
-- Expand test coverage around edge cases
-- Add Docker or local demo workflow where useful
-- Prepare `v0.1.0-mvp` release notes
+- Add real OSV/NVD integration behind an offline-friendly provider boundary
+- Add package-lock and poetry.lock support
+- Add breaking-change risk checks
+- Add GitHub App flow for draft PR creation
+- Add web dashboard for upload, findings, and PR preview

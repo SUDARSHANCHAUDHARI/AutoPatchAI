@@ -1,34 +1,50 @@
 [
   {
+    "confidence": "offline-rule-match",
     "ecosystem": "npm",
     "from": "4.17.20",
     "name": "lodash",
+    "priority": "urgent",
     "reason": "lodash should be upgraded to 4.17.21.",
+    "severity": "high",
     "source": "data/samples/package.json",
-    "to": "4.17.21"
+    "to": "4.17.21",
+    "validation": "Run unit tests, dependency audit, and smoke checks before merging."
   },
   {
+    "confidence": "offline-rule-match",
     "ecosystem": "python",
     "from": "3.2.0",
     "name": "django",
+    "priority": "urgent",
     "reason": "django should be upgraded to 4.2.11.",
+    "severity": "high",
     "source": "data/samples/requirements.txt",
-    "to": "4.2.11"
+    "to": "4.2.11",
+    "validation": "Run unit tests, dependency audit, and smoke checks before merging."
   },
   {
-    "ecosystem": "python",
-    "from": "unpinned",
-    "name": "requests",
-    "reason": "requests is unpinned.",
-    "source": "data/samples/requirements.txt",
-    "to": "pin-reviewed-version"
-  },
-  {
+    "confidence": "offline-rule-match",
     "ecosystem": "docker",
     "from": "latest",
     "name": "python",
+    "priority": "normal",
     "reason": "python should be upgraded to 3.12-slim.",
+    "severity": "medium",
     "source": "data/samples/Dockerfile",
-    "to": "3.12-slim"
+    "to": "3.12-slim",
+    "validation": "Run unit tests, dependency audit, and smoke checks before merging."
+  },
+  {
+    "confidence": "policy-check",
+    "ecosystem": "python",
+    "from": "unpinned",
+    "name": "requests",
+    "priority": "normal",
+    "reason": "requests is unpinned.",
+    "severity": "medium",
+    "source": "data/samples/requirements.txt",
+    "to": "pin-reviewed-version",
+    "validation": "Run unit tests, dependency audit, and smoke checks before merging."
   }
 ]

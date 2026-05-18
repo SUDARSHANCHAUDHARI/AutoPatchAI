@@ -3,6 +3,8 @@ services:
     build:
       context: .
       dockerfile: docker/Dockerfile.api
+    volumes:
+      - ./data/reports:/app/data/reports
   web:
     build:
       context: .
