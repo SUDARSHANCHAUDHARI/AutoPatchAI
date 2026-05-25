@@ -6,6 +6,7 @@
   "scripts": {
     "setup": "bash scripts/setup.sh",
     "seed": "bash scripts/seed-demo-data.sh",
-    "dev": "bash scripts/run-local.sh"
+    "dev": "bash scripts/run-local.sh",
+    "test": "python3 -m unittest discover -s tests -p \"test*.py\""
   }
 }
