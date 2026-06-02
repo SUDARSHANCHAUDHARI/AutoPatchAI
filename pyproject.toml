@@ -1,0 +1,14 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.backends.legacy:build"
+
+[project]
+name = "autopatchai"
+version = "1.0.0"
+description = "AI-assisted dependency vulnerability fixer that scans package files and produces safe upgrade plans"
+readme = "README.md"
+license = { file = "LICENSE" }
+requires-python = ">=3.10"
+
+[project.scripts]
+auto-patch-ai = "apps.api.app.cli:main"
