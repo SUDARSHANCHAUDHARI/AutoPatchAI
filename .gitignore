@@ -1,22 +1,42 @@
-# Production hygiene
+# Operating System
 .DS_Store
+Thumbs.db
+
+# Environment / secrets
 .env
 .env.*
 !.env.example
-*.log
-*.tmp
-.cache/
-coverage/
-dist/
-build/
-.next/
-node_modules/
+*.pem
+*.key
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
 .venv/
 venv/
-__pycache__/
 .pytest_cache/
 .mypy_cache/
 .ruff_cache/
+
+# Node / Web
+node_modules/
+.next/
+dist/
+build/
+coverage/
+.cache/
+
+# Editors
 .idea/
 .vscode/
+*.swp
+*.swo
 
+# Tooling
+graphify-out/
+
+# Logs / temp
+*.log
+*.tmp
