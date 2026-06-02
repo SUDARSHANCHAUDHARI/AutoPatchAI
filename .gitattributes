@@ -1,0 +1,22 @@
+# Default behavior: normalize line endings to LF on checkin
+* text=auto eol=lf
+
+# Explicit text files
+*.py     text diff=python
+*.md     text
+*.yml    text
+*.yaml   text
+*.json   text
+*.toml   text
+*.txt    text
+*.sh     text eol=lf
+
+# Binary files
+*.png    binary
+*.jpg    binary
+*.jpeg   binary
+*.gif    binary
+*.ico    binary
+*.pdf    binary
+*.zip    binary
+*.gz     binary
