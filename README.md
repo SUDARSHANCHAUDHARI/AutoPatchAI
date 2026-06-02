@@ -37,6 +37,19 @@ FastAPI, React, vulnerability data APIs, Docker.
 
 Working CLI MVP.
 
+
+## Install
+
+```bash
+pip install .
+```
+
+This registers the `auto-patch-ai` command. Or run directly:
+
+```bash
+python3 main.py --help
+```
+
 ## Quick Start
 
 Scan the included dependency samples:
