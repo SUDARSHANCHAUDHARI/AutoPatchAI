@@ -1,0 +1,2 @@
+# Python >= 3.10 required
+# This project uses the Python standard library only — no third-party packages needed.
