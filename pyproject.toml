@@ -12,3 +12,10 @@ requires-python = ">=3.10"
 
 [project.scripts]
 auto-patch-ai = "apps.api.app.cli:main"
+
+[tool.setuptools]
+py-modules = ["main"]
+
+[tool.setuptools.packages.find]
+include = ["apps*"]
+exclude = ["apps.web*"]
