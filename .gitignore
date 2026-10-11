@@ -40,3 +40,5 @@ graphify-out/
 # Logs / temp
 *.log
 *.tmp
+
+repoguard-results/
